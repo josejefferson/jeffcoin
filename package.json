@@ -1,0 +1,17 @@
+{
+  "name": "jeffcoin",
+  "module": "src/index.ts",
+  "type": "module",
+  "dependencies": {
+    "elliptic": "^6.6.1",
+    "sha256": "^0.2.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/elliptic": "^6.4.18",
+    "@types/sha256": "^0.2.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
