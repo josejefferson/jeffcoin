@@ -1,5 +1,6 @@
 import sha256 from 'sha256'
 import { Transacao } from './transacao'
+import { createModelSchema, identifier, list, object, primitive } from 'serializr'
 
 export class Bloco {
   index: number
@@ -7,12 +8,10 @@ export class Bloco {
   transacoes: Transacao[]
   hashAnterior: string
   hash: string
-  blocoAnterior: Bloco | null
   nonce: number
 
   constructor(transacoes: Transacao[] = [], blocoAnterior: Bloco | null = null, dificuldade: number = 1) {
     this.transacoes = transacoes
-    this.blocoAnterior = blocoAnterior
     this.index = (blocoAnterior?.index ?? -1) + 1
     this.hashAnterior = blocoAnterior?.hash || ''
     this.timestamp = Date.now()
@@ -47,3 +46,12 @@ export class Bloco {
     return true
   }
 }
+
+createModelSchema(Bloco, {
+  index: primitive(),
+  timestamp: primitive(),
+  transacoes: list(object(Transacao)),
+  hashAnterior: primitive(),
+  hash: primitive(),
+  nonce: primitive()
+})

@@ -1,5 +1,6 @@
 import sha256 from 'sha256'
 import EC from 'elliptic'
+import { createModelSchema, primitive } from 'serializr'
 
 const ec = new EC.ec('secp256k1')
 
@@ -17,10 +18,6 @@ export class Transacao {
     enderecoDestino: string,
     tipo: 'transferencia' | 'recompensa' = 'transferencia'
   ) {
-    if (tipo === 'transferencia' && !enderecoOrigem) {
-      throw new Error('Endereço de origem é obrigatório para transações de transferência')
-    }
-
     this.valor = valor
     this.tipo = tipo
     this.enderecoOrigem = enderecoOrigem
@@ -56,3 +53,12 @@ export class Transacao {
     return publicKey.verify(this.calcularHash(), this.assinatura)
   }
 }
+
+createModelSchema(Transacao, {
+  valor: primitive(),
+  tipo: primitive(),
+  enderecoOrigem: primitive(),
+  enderecoDestino: primitive(),
+  timestamp: primitive(),
+  assinatura: primitive()
+})

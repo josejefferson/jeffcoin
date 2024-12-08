@@ -1,0 +1,47 @@
+{
+  "blocos": [
+    {
+      "index": 0,
+      "timestamp": 1733664367964,
+      "transacoes": [
+        {
+          "valor": 100,
+          "tipo": "recompensa",
+          "enderecoOrigem": null,
+          "enderecoDestino": "043b6f79fb45bd0cfb2d0260cdc02136aca3071254c45f95db1614ecc2fbf2840d0d786389bb4564c09f3bf90166b9f26911b96412f3aff0ba99a69126505d8410",
+          "timestamp": 1733664367964
+        }
+      ],
+      "hashAnterior": "",
+      "hash": "0fbfeb4f601856627b6eda5061cbc767186c2c976aa1822b0cadb4c4053d5af4",
+      "nonce": 21
+    },
+    {
+      "index": 1,
+      "timestamp": 1733664367995,
+      "transacoes": [
+        {
+          "valor": 13,
+          "tipo": "transferencia",
+          "enderecoOrigem": "043b6f79fb45bd0cfb2d0260cdc02136aca3071254c45f95db1614ecc2fbf2840d0d786389bb4564c09f3bf90166b9f26911b96412f3aff0ba99a69126505d8410",
+          "enderecoDestino": "04f30881bd9e9f9656bcb2bce0269ddf6f9aec40024c86838a1b8cf91eea10f505cf755af9b3847c9a263db347a56c3d3517ec6e28135c107f7a473d8130e7c7f0",
+          "timestamp": 1733664367965,
+          "assinatura": "304502207953f44901c4c13cc6bb9e5961f7ab4c87fbe2688674b405421b862716c33d58022100857608c6010ab0347f9232129b18f5942d67a4a36500093d6c1de2ac3c747c8b"
+        },
+        {
+          "valor": 100,
+          "tipo": "recompensa",
+          "enderecoOrigem": null,
+          "enderecoDestino": "04f30881bd9e9f9656bcb2bce0269ddf6f9aec40024c86838a1b8cf91eea10f505cf755af9b3847c9a263db347a56c3d3517ec6e28135c107f7a473d8130e7c7f0",
+          "timestamp": 1733664367995
+        }
+      ],
+      "hashAnterior": "0fbfeb4f601856627b6eda5061cbc767186c2c976aa1822b0cadb4c4053d5af4",
+      "hash": "06709c7226b45322b3baf65f4d064275c0b6e29a86e1069a11cf581e475c5d7b",
+      "nonce": 6
+    }
+  ],
+  "transacoesPendentes": [],
+  "dificuldade": 1,
+  "recompensa": 100
+}

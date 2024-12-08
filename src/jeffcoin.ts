@@ -1,24 +1,29 @@
+import { createModelSchema, list, object, primitive } from 'serializr'
 import { Bloco } from './bloco'
 import { Transacao } from './transacao'
 
 export class JeffCoin {
-  ultimoBloco: Bloco
+  blocos: Bloco[]
   transacoesPendentes: Transacao[]
   dificuldade: number
-  recompensa = 1
+  recompensa = 100
 
   constructor() {
-    this.ultimoBloco = new Bloco()
+    this.blocos = []
     this.transacoesPendentes = []
     this.dificuldade = 1
+  }
+
+  getUltimoBloco() {
+    return this.blocos[this.blocos.length - 1]
   }
 
   minerarTransacoesPendentes(enderecoMinerador: string) {
     const recompensa = new Transacao(this.recompensa, null, enderecoMinerador, 'recompensa')
     this.transacoesPendentes.push(recompensa)
 
-    const block = new Bloco(this.transacoesPendentes, this.ultimoBloco, this.dificuldade)
-    this.ultimoBloco = block
+    const block = new Bloco(this.transacoesPendentes, this.getUltimoBloco(), this.dificuldade)
+    this.blocos.push(block)
     this.transacoesPendentes = []
     return block
   }
@@ -26,13 +31,12 @@ export class JeffCoin {
   saldoDaCarteira(endereco: string) {
     let saldo = 0
 
-    let blocoAtual: Bloco | null = this.ultimoBloco
-    while (blocoAtual !== null) {
-      for (const transacao of blocoAtual.transacoes) {
+    for (let i = this.blocos.length - 1; i >= 0; i--) {
+      const bloco = this.blocos[i]
+      for (const transacao of bloco.transacoes) {
         if (transacao.enderecoOrigem === endereco) saldo -= transacao.valor
         if (transacao.enderecoDestino === endereco) saldo += transacao.valor
       }
-      blocoAtual = blocoAtual.blocoAnterior
     }
 
     for (const transacao of this.transacoesPendentes) {
@@ -57,27 +61,23 @@ export class JeffCoin {
   }
 
   validarBlockchain() {
-    let blocoAtual = this.ultimoBloco
-    let blocoAnterior = this.ultimoBloco.blocoAnterior
+    for (let i = this.blocos.length - 1; i >= 0; i--) {
+      let blocoAtual = this.blocos[i]
+      let blocoAnterior = this.blocos[i - 1]
 
-    while (blocoAnterior) {
       if (blocoAtual.hash !== blocoAtual.calcularHash()) return false
-      if (blocoAtual.hashAnterior !== blocoAnterior.hash) return false
+      if (blocoAnterior && blocoAtual.hashAnterior !== blocoAnterior.hash) return false
 
       if (!blocoAtual.validarTransacoes()) return false
-
-      blocoAtual = blocoAnterior
-      blocoAnterior = blocoAnterior.blocoAnterior
-    }
-
-    if (blocoAtual.calcularHash() !== blocoAtual.hash) {
-      return false
-    }
-
-    if (!blocoAtual.validarTransacoes()) {
-      return false
     }
 
     return true
   }
 }
+
+createModelSchema(JeffCoin, {
+  blocos: list(object(Bloco)),
+  transacoesPendentes: list(object(Transacao)),
+  dificuldade: primitive(),
+  recompensa: primitive()
+})

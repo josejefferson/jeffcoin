@@ -4,6 +4,7 @@
   "type": "module",
   "dependencies": {
     "elliptic": "^6.6.1",
+    "serializr": "^3.0.3",
     "sha256": "^0.2.0"
   },
   "devDependencies": {
