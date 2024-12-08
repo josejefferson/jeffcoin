@@ -42,4 +42,17 @@ export class Transacao {
     const assinatura = chave.sign(this.calcularHash(), 'base64').toDER('hex')
     this.assinatura = assinatura
   }
+
+  validar() {
+    if (this.tipo === 'recompensa') {
+      return true
+    }
+
+    if (!this.enderecoOrigem || !this.assinatura) {
+      return false
+    }
+
+    const publicKey = ec.keyFromPublic(this.enderecoOrigem, 'hex')
+    return publicKey.verify(this.calcularHash(), this.assinatura)
+  }
 }

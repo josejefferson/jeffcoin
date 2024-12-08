@@ -64,11 +64,17 @@ export class JeffCoin {
       if (blocoAtual.hash !== blocoAtual.calcularHash()) return false
       if (blocoAtual.hashAnterior !== blocoAnterior.hash) return false
 
+      if (!blocoAtual.validarTransacoes()) return false
+
       blocoAtual = blocoAnterior
       blocoAnterior = blocoAnterior.blocoAnterior
     }
 
     if (blocoAtual.calcularHash() !== blocoAtual.hash) {
+      return false
+    }
+
+    if (!blocoAtual.validarTransacoes()) {
       return false
     }
 

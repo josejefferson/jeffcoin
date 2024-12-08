@@ -37,4 +37,13 @@ export class Bloco {
 
     return { hash, nonce }
   }
+
+  validarTransacoes() {
+    for (const transacao of this.transacoes) {
+      if (!transacao.validar()) {
+        return false
+      }
+    }
+    return true
+  }
 }
