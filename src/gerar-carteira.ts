@@ -1,6 +1,6 @@
-import { ec } from 'elliptic'
+import EC from 'elliptic'
 
-const chave = new ec('secp256k1').genKeyPair()
+const chave = new EC.ec('secp256k1').genKeyPair()
 const chavePublica = chave.getPublic('hex')
 const chavePrivada = chave.getPrivate('hex')
 
