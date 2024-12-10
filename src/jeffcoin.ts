@@ -3,26 +3,29 @@ import { Bloco } from './bloco'
 import { Transacao } from './transacao'
 
 export class JeffCoin {
+  static DIFICULDADE_MINIMA = 4
   blocos: Bloco[]
   transacoesPendentes: Transacao[]
-  dificuldade: number
-  recompensa = 100
+  recompensa = 10
 
   constructor() {
     this.blocos = []
     this.transacoesPendentes = []
-    this.dificuldade = 1
   }
 
   getUltimoBloco() {
     return this.blocos[this.blocos.length - 1]
   }
 
+  getDificuldade() {
+    return Math.floor(this.blocos.length / 50) + JeffCoin.DIFICULDADE_MINIMA
+  }
+
   minerarTransacoesPendentes(enderecoMinerador: string) {
     const recompensa = new Transacao(this.recompensa, null, enderecoMinerador, 'recompensa')
     this.transacoesPendentes.push(recompensa)
 
-    const block = new Bloco(this.transacoesPendentes, this.getUltimoBloco(), this.dificuldade)
+    const block = new Bloco(this.transacoesPendentes, this.getUltimoBloco(), this.getDificuldade())
     this.blocos.push(block)
     this.transacoesPendentes = []
     return block
@@ -64,13 +67,8 @@ export class JeffCoin {
     for (let i = this.blocos.length - 1; i >= 0; i--) {
       let blocoAtual = this.blocos[i]
       let blocoAnterior = this.blocos[i - 1]
-
-      if (blocoAtual.hash !== blocoAtual.calcularHash()) return false
-      if (blocoAnterior && blocoAtual.hashAnterior !== blocoAnterior.hash) return false
-
-      if (!blocoAtual.validarTransacoes()) return false
+      if (!blocoAtual.validar(blocoAnterior)) return false
     }
-
     return true
   }
 }
@@ -78,6 +76,5 @@ export class JeffCoin {
 createModelSchema(JeffCoin, {
   blocos: list(object(Bloco)),
   transacoesPendentes: list(object(Transacao)),
-  dificuldade: primitive(),
   recompensa: primitive()
 })

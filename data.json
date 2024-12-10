@@ -2,46 +2,217 @@
   "blocos": [
     {
       "index": 0,
-      "timestamp": 1733664367964,
+      "timestamp": 1733840272381,
       "transacoes": [
         {
-          "valor": 100,
+          "valor": 10,
           "tipo": "recompensa",
           "enderecoOrigem": null,
           "enderecoDestino": "043b6f79fb45bd0cfb2d0260cdc02136aca3071254c45f95db1614ecc2fbf2840d0d786389bb4564c09f3bf90166b9f26911b96412f3aff0ba99a69126505d8410",
-          "timestamp": 1733664367964
+          "timestamp": 1733840272381
         }
       ],
       "hashAnterior": "",
-      "hash": "0fbfeb4f601856627b6eda5061cbc767186c2c976aa1822b0cadb4c4053d5af4",
-      "nonce": 21
+      "hash": "0000d64c7939c37a6721d69421c77042024e0e39f40fc924a8fb42827d27cd8d",
+      "nonce": 25577,
+      "dificuldade": 4
     },
     {
       "index": 1,
-      "timestamp": 1733664367995,
+      "timestamp": 1733840272490,
+      "transacoes": [
+        {
+          "valor": 10,
+          "tipo": "recompensa",
+          "enderecoOrigem": null,
+          "enderecoDestino": "043b6f79fb45bd0cfb2d0260cdc02136aca3071254c45f95db1614ecc2fbf2840d0d786389bb4564c09f3bf90166b9f26911b96412f3aff0ba99a69126505d8410",
+          "timestamp": 1733840272490
+        }
+      ],
+      "hashAnterior": "0000d64c7939c37a6721d69421c77042024e0e39f40fc924a8fb42827d27cd8d",
+      "hash": "00000b518c710fe7e0d6d1f53bf45c881baa3414201f4bfa567e804e56ea0dd6",
+      "nonce": 25733,
+      "dificuldade": 4
+    },
+    {
+      "index": 2,
+      "timestamp": 1733840272601,
+      "transacoes": [
+        {
+          "valor": 10,
+          "tipo": "recompensa",
+          "enderecoOrigem": null,
+          "enderecoDestino": "043b6f79fb45bd0cfb2d0260cdc02136aca3071254c45f95db1614ecc2fbf2840d0d786389bb4564c09f3bf90166b9f26911b96412f3aff0ba99a69126505d8410",
+          "timestamp": 1733840272601
+        }
+      ],
+      "hashAnterior": "00000b518c710fe7e0d6d1f53bf45c881baa3414201f4bfa567e804e56ea0dd6",
+      "hash": "0000ce1305e699089140cdecf34a82993245e5189ebb11d4a5bc75d345efb626",
+      "nonce": 67239,
+      "dificuldade": 4
+    },
+    {
+      "index": 3,
+      "timestamp": 1733840272851,
+      "transacoes": [
+        {
+          "valor": 10,
+          "tipo": "recompensa",
+          "enderecoOrigem": null,
+          "enderecoDestino": "043b6f79fb45bd0cfb2d0260cdc02136aca3071254c45f95db1614ecc2fbf2840d0d786389bb4564c09f3bf90166b9f26911b96412f3aff0ba99a69126505d8410",
+          "timestamp": 1733840272851
+        }
+      ],
+      "hashAnterior": "0000ce1305e699089140cdecf34a82993245e5189ebb11d4a5bc75d345efb626",
+      "hash": "00006d1ac28d7d5fc6efaa57c2ddb0de40db25f67daec460bc455427e5a1ba9f",
+      "nonce": 34295,
+      "dificuldade": 4
+    },
+    {
+      "index": 4,
+      "timestamp": 1733840272972,
+      "transacoes": [
+        {
+          "valor": 10,
+          "tipo": "recompensa",
+          "enderecoOrigem": null,
+          "enderecoDestino": "043b6f79fb45bd0cfb2d0260cdc02136aca3071254c45f95db1614ecc2fbf2840d0d786389bb4564c09f3bf90166b9f26911b96412f3aff0ba99a69126505d8410",
+          "timestamp": 1733840272972
+        }
+      ],
+      "hashAnterior": "00006d1ac28d7d5fc6efaa57c2ddb0de40db25f67daec460bc455427e5a1ba9f",
+      "hash": "00009ecb0345638801ea7758c223ea6267101337535f0ed751b2eda92ab5a449",
+      "nonce": 57899,
+      "dificuldade": 4
+    },
+    {
+      "index": 5,
+      "timestamp": 1733840273173,
+      "transacoes": [
+        {
+          "valor": 10,
+          "tipo": "recompensa",
+          "enderecoOrigem": null,
+          "enderecoDestino": "043b6f79fb45bd0cfb2d0260cdc02136aca3071254c45f95db1614ecc2fbf2840d0d786389bb4564c09f3bf90166b9f26911b96412f3aff0ba99a69126505d8410",
+          "timestamp": 1733840273173
+        }
+      ],
+      "hashAnterior": "00009ecb0345638801ea7758c223ea6267101337535f0ed751b2eda92ab5a449",
+      "hash": "0000135d4ab0759908214e993af7ecf7557fe98600cee068848865482eb8be53",
+      "nonce": 100421,
+      "dificuldade": 4
+    },
+    {
+      "index": 6,
+      "timestamp": 1733840273511,
+      "transacoes": [
+        {
+          "valor": 10,
+          "tipo": "recompensa",
+          "enderecoOrigem": null,
+          "enderecoDestino": "043b6f79fb45bd0cfb2d0260cdc02136aca3071254c45f95db1614ecc2fbf2840d0d786389bb4564c09f3bf90166b9f26911b96412f3aff0ba99a69126505d8410",
+          "timestamp": 1733840273511
+        }
+      ],
+      "hashAnterior": "0000135d4ab0759908214e993af7ecf7557fe98600cee068848865482eb8be53",
+      "hash": "00009781e652830a9588d9b7422b101d7db5bbeb278e868f84c9fb6adfda7665",
+      "nonce": 200276,
+      "dificuldade": 4
+    },
+    {
+      "index": 7,
+      "timestamp": 1733840274225,
+      "transacoes": [
+        {
+          "valor": 10,
+          "tipo": "recompensa",
+          "enderecoOrigem": null,
+          "enderecoDestino": "043b6f79fb45bd0cfb2d0260cdc02136aca3071254c45f95db1614ecc2fbf2840d0d786389bb4564c09f3bf90166b9f26911b96412f3aff0ba99a69126505d8410",
+          "timestamp": 1733840274225
+        }
+      ],
+      "hashAnterior": "00009781e652830a9588d9b7422b101d7db5bbeb278e868f84c9fb6adfda7665",
+      "hash": "00005342936e8f94ba69666d4c629c0c7514023ad42428230e459afebb7bf640",
+      "nonce": 23548,
+      "dificuldade": 4
+    },
+    {
+      "index": 8,
+      "timestamp": 1733840274312,
+      "transacoes": [
+        {
+          "valor": 10,
+          "tipo": "recompensa",
+          "enderecoOrigem": null,
+          "enderecoDestino": "043b6f79fb45bd0cfb2d0260cdc02136aca3071254c45f95db1614ecc2fbf2840d0d786389bb4564c09f3bf90166b9f26911b96412f3aff0ba99a69126505d8410",
+          "timestamp": 1733840274312
+        }
+      ],
+      "hashAnterior": "00005342936e8f94ba69666d4c629c0c7514023ad42428230e459afebb7bf640",
+      "hash": "00007de37a0395bccab16665454f7a20430ed01abdc2cd1b90d86b1e7dfb2491",
+      "nonce": 94585,
+      "dificuldade": 4
+    },
+    {
+      "index": 9,
+      "timestamp": 1733840274641,
+      "transacoes": [
+        {
+          "valor": 10,
+          "tipo": "recompensa",
+          "enderecoOrigem": null,
+          "enderecoDestino": "043b6f79fb45bd0cfb2d0260cdc02136aca3071254c45f95db1614ecc2fbf2840d0d786389bb4564c09f3bf90166b9f26911b96412f3aff0ba99a69126505d8410",
+          "timestamp": 1733840274641
+        }
+      ],
+      "hashAnterior": "00007de37a0395bccab16665454f7a20430ed01abdc2cd1b90d86b1e7dfb2491",
+      "hash": "0000d897521be015f26e6011f75e4871c0b0f420ea990702d010bc98cadb75dc",
+      "nonce": 83000,
+      "dificuldade": 4
+    },
+    {
+      "index": 10,
+      "timestamp": 1733840275015,
       "transacoes": [
         {
           "valor": 13,
           "tipo": "transferencia",
           "enderecoOrigem": "043b6f79fb45bd0cfb2d0260cdc02136aca3071254c45f95db1614ecc2fbf2840d0d786389bb4564c09f3bf90166b9f26911b96412f3aff0ba99a69126505d8410",
           "enderecoDestino": "04f30881bd9e9f9656bcb2bce0269ddf6f9aec40024c86838a1b8cf91eea10f505cf755af9b3847c9a263db347a56c3d3517ec6e28135c107f7a473d8130e7c7f0",
-          "timestamp": 1733664367965,
-          "assinatura": "304502207953f44901c4c13cc6bb9e5961f7ab4c87fbe2688674b405421b862716c33d58022100857608c6010ab0347f9232129b18f5942d67a4a36500093d6c1de2ac3c747c8b"
+          "timestamp": 1733840274973,
+          "assinatura": "30450220050f0e6ab4b601a8ec9e6a30b5abb5c5b5a9dc57e9ebf56897e2b3764d60fc14022100fe389c41d83dc8626b8a2291417a2a45ab0eb7275b619f990015d52f4fa5b547"
         },
         {
-          "valor": 100,
+          "valor": 10,
           "tipo": "recompensa",
           "enderecoOrigem": null,
           "enderecoDestino": "04f30881bd9e9f9656bcb2bce0269ddf6f9aec40024c86838a1b8cf91eea10f505cf755af9b3847c9a263db347a56c3d3517ec6e28135c107f7a473d8130e7c7f0",
-          "timestamp": 1733664367995
+          "timestamp": 1733840275015
         }
       ],
-      "hashAnterior": "0fbfeb4f601856627b6eda5061cbc767186c2c976aa1822b0cadb4c4053d5af4",
-      "hash": "06709c7226b45322b3baf65f4d064275c0b6e29a86e1069a11cf581e475c5d7b",
-      "nonce": 6
+      "hashAnterior": "0000d897521be015f26e6011f75e4871c0b0f420ea990702d010bc98cadb75dc",
+      "hash": "0000704baf93366fa0db2ea6b20deb79df325d1c15ebafbee661787f8951e95c",
+      "nonce": 9462,
+      "dificuldade": 4
+    },
+    {
+      "index": 11,
+      "timestamp": 1733840275073,
+      "transacoes": [
+        {
+          "valor": 10,
+          "tipo": "recompensa",
+          "enderecoOrigem": null,
+          "enderecoDestino": "04f30881bd9e9f9656bcb2bce0269ddf6f9aec40024c86838a1b8cf91eea10f505cf755af9b3847c9a263db347a56c3d3517ec6e28135c107f7a473d8130e7c7f0",
+          "timestamp": 1733840275073
+        }
+      ],
+      "hashAnterior": "0000704baf93366fa0db2ea6b20deb79df325d1c15ebafbee661787f8951e95c",
+      "hash": "0000c26f3c5a6ca7edd39b60865e103f8adcc3cfef2d55368c3f682dc1ddb4c9",
+      "nonce": 60494,
+      "dificuldade": 4
     }
   ],
   "transacoesPendentes": [],
-  "dificuldade": 1,
-  "recompensa": 100
+  "recompensa": 10
 }

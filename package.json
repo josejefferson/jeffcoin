@@ -2,6 +2,10 @@
   "name": "jeffcoin",
   "module": "src/index.ts",
   "type": "module",
+  "scripts": {
+    "start": "bun src/index.ts",
+    "gen-wallet": "bun src/gerar-carteira.ts"
+  },
   "dependencies": {
     "elliptic": "^6.6.1",
     "serializr": "^3.0.3",
