@@ -5,10 +5,11 @@
   "scripts": {
     "start": "bun src/index.ts",
     "gen-wallet": "bun src/gerar-carteira.ts",
-    "start:tsx": "tsx --env-file=.env src/index.ts",
-    "gen-wallet:tsx": "tsx --env-file=.env src/gerar-carteira.ts"
+    "start:tsx": "dotenv -- tsx src/index.ts",
+    "gen-wallet:tsx": "dotenv -- tsx src/gerar-carteira.ts"
   },
   "dependencies": {
+    "dotenv-cli": "^7.4.4",
     "elliptic": "^6.6.1",
     "serializr": "^3.0.3",
     "sha256": "^0.2.0"
